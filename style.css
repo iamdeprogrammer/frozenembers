@@ -1,0 +1,153 @@
+/*font imports*/
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+/*header format*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #01061a;
+}
+
+li, a, button {
+    font-family: "Figtree";
+    font-weight: 400;
+    font-size: 18px;
+    color: #edf0f1;
+    text-decoration:none;
+    background-color: transparent;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    z-index: 10;
+    /*magical lines for sticky header - no touching */
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.navlist {
+    list-style: none;    
+}
+
+.navlist li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navlist li a {
+    transition: 0.5s ease;
+}
+
+.navlist li a:hover {
+    background-image: linear-gradient(45deg, #4ebbff, #bd3d61);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.signIn {
+    color: #c2fbd7;
+}
+
+.parallax {
+    background-image: url('hero.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* Enable parallax scrolling, no touchy */
+    background-attachment: fixed;
+    /* Add padding to hero text to place, touchies permitted */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.heroText {
+    font-family: "Rajdhani";
+    font-weight: 400px;
+    font-size: 250%;
+    color: whitesmoke;
+    animation: fadeIn 3s;
+    -webkit-animation: fadeIn 3s;
+    -moz-animation: fadeIn 3s;
+    -o-animation: fadeIn 3s;
+    -ms-animation: fadeIn 3s;
+    background-color: transparent;
+    margin: 4px;
+
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.heroSubtitle {
+    font-size: 175%;
+    background-color: transparent;
+}
+
+#playbutton {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+
+button {
+    background-color: green;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: #c2fbd7;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    margin: 5px;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.browseSlides {
+    height: 93vh;
+    width: 100%;
+}
+
+.slides, .wrapper {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.slides .image {
+    height: 93vh;
+    width: 100vw;
+}
+
+.slideWords {
+    position: absolute;
+    top: 150%;
+    left: 44%;
+    font-family: "Figtree";
+    font-weight: bold;
+    font-size: 85px;
+}
